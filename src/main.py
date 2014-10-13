@@ -6,11 +6,7 @@
 from excel import Excel
 from db import Database
 
-# x = Excel("../Data/IPC_Portugal_1977_2013.xls")
 x = Excel("../Data/IPC_Portugal_1977_2013.xls")
-#x.readFile()
-#lista = x.lista
-
 x.read_data()
 lista2 = x.lista2
 
