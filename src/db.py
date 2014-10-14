@@ -25,7 +25,7 @@ class Database:
     def create_table(self):
 
         Database.cursor.execute(
-            ('CREATE TABLE IPC(ano INTEGER PRIMARY KEY, ipc REAL, va REAL, remmax REAL, remmin REAL,\n'
+            ('CREATE TABLE IF NOT EXISTS IPC(ano INTEGER PRIMARY KEY, ipc REAL, va REAL, remmax REAL, remmin REAL,\n'
              '    PIBpercap REAL, rnbpca REAL, rdbpca REAL, rpca REAL)'))
         Database.db.commit()
 
