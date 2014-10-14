@@ -38,6 +38,7 @@ class Database:
     def test(self):
         Database.cursor.execute('SELECT * FROM IPC')
         for row in Database.cursor:
+            #print row
             for value in row:
                 print value,
             print
