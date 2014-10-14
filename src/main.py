@@ -16,8 +16,6 @@ try:
     d.create_table()
 
     d.insert_data()
-
-    #d.test()
     d.select('va')
 
     a = 9.1257182
