@@ -9,7 +9,7 @@ from db import Database
 try:
     x = Excel("../Data/IPC_Portugal_1977_2013.xls")
 except IOError as e:
-    print "I/O error ({0]): [1]".format(e.errno , e.strerror)
+    print "I/O error ({0]): [1]".format(e.errno, e.strerror)
 x.read_data()
 lista2 = x.lista2
 
