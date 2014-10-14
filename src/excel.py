@@ -25,7 +25,6 @@ class Excel:
             lst = []
             for col in range(1, sheet.ncols):
                 value = sheet.cell(row, col).value
-                print type(value)
                 if value != '':
                     lst.append(value)
                 else:

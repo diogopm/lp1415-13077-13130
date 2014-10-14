@@ -18,7 +18,7 @@ try:
     d.insert_data()
 
     #d.test()
-    d.select('*')
+    d.select('va')
 
     a = 9.1257182
     a = round(a, 2)
