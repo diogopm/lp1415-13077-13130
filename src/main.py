@@ -18,9 +18,5 @@ try:
     d.insert_data()
     d.select('va')
 
-    a = 9.1257182
-    a = round(a, 2)
-    print '{0:.2f}'.format(a)
-
 except IOError as e:
     print "I/O error ({0}): {1}".format(e.errno, e.strerror)
