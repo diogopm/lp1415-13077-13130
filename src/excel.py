@@ -17,7 +17,6 @@ class Excel:
         Excel.workBook = open_workbook(Excel.excelFileLoc)
         #print excelfilelocation
 
-
     def read_data(self):
 
         sheet = Excel.workBook.sheet_by_index(0)
@@ -29,6 +28,5 @@ class Excel:
                 if value != '':
                     lst.append(value)
                 else:
-                    lst.append('null')  # não sei se é mesmo assim que se marcam os nulls
+                    lst.append('NULL')  # não sei se é mesmo assim que se marcam os nulls
             Excel.lista.append(lst)
-

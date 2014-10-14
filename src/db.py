@@ -14,10 +14,12 @@ class Database:
         Database.cursor = Database.db.cursor()
 
     def drop_table(self):
-        Database.cursor.execute('DROP TABLE IPC')
+
+        Database.cursor.execute('DROP TABLE IF EXISTS IPC')
         Database.db.commit()
 
     def create_table(self):
+
         Database.cursor.execute(
             ('CREATE TABLE IPC(ano INTEGER PRIMARY KEY, ipc REAL, va REAL, remmax REAL, remmin REAL,\n'
              '    PIBpercap REAL, rnbpca REAL, rdbpca REAL, rpca REAL)'))
