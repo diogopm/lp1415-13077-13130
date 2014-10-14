@@ -1,6 +1,10 @@
-__author__ = 'Diogo'
+# -*- coding: utf-8 -*-
+# authors 13077/13130
+# data: 05 de outubro de 2014
+#
 
 import sqlite3
+import types
 
 
 class Database:
@@ -34,4 +38,19 @@ class Database:
     def test(self):
         Database.cursor.execute('SELECT * FROM IPC')
         for row in Database.cursor:
-            print row
+            #print row
+            for value in row:
+                print value,
+            print
+
+    def select(self, attrb):
+        Database.cursor.execute('SELECT ' + attrb + ' FROM IPC')
+        Database.db.commit()
+        for row in Database.cursor:
+            for value in row:
+                if isinstance(value, float):
+                    #print '{0:.2f}'.format(value), # acho que não vale a pena usar este
+                    print float(round(value, 2)),
+                else:
+                    print value,
+            print

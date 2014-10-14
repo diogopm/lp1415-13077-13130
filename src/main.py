@@ -15,8 +15,14 @@ try:
     d.drop_table()
     d.create_table()
 
-    d.insert_data2()
+    d.insert_data()
 
-    d.test()
+    #d.test()
+    d.select('*')
+
+    a = 9.1257182
+    a = round(a, 2)
+    print '{0:.2f}'.format(a)
+
 except IOError as e:
-    print "I/O error ({0]): [1]".format(e.errno, e.strerror)
+    print "I/O error ({0}): {1}".format(e.errno, e.strerror)
